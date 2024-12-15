@@ -1,0 +1,113 @@
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calorieën Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Calorieën en Voedingsdoelen</h1>
+        
+        <div class="goals-section">
+            <h2>Stel je doelen in</h2>
+            <label for="calorieGoal">Calorieën doel:</label>
+            <input type="number" id="calorieGoal" placeholder="1000">
+            <label for="carbGoal">Koolhydraten doel (g):</label>
+            <input type="number" id="carbGoal" placeholder="100">
+            <label for="proteinGoal">Eiwitten doel (g):</label>
+            <input type="number" id="proteinGoal" placeholder="50">
+            <label for="fatGoal">Vetten doel (g):</label>
+            <input type="number" id="fatGoal" placeholder="30">
+            <button id="setGoalsBtn">Stel doelen in</button>
+        </div>
+
+        <div class="progress-section">
+            <h2>Voortgang</h2>
+            <div class="progress-bar-container">
+                <label for="calorieProgress">Calorieën:</label>
+                <progress id="calorieProgress" max="100" value="0"></progress>
+                <span id="calorieCount">0%</span>
+            </div>
+            <div class="progress-bar-container">
+                <label for="carbProgress">Koolhydraten:</label>
+                <progress id="carbProgress" max="100" value="0"></progress>
+                <span id="carbCount">0%</span>
+            </div>
+            <div class="progress-bar-container">
+                <label for="proteinProgress">Eiwitten:</label>
+                <progress id="proteinProgress" max="100" value="0"></progress>
+                <span id="proteinCount">0%</span>
+            </div>
+            <div class="progress-bar-container">
+                <label for="fatProgress">Vetten:</label>
+                <progress id="fatProgress" max="100" value="0"></progress>
+                <span id="fatCount">0%</span>
+            </div>
+        </div>
+
+        <div class="broodje-section">
+            <h2>Voeg een broodje toe</h2>
+            <select id="broodjeDropdown">
+                <option value="Mozzarella">Mozzarella</option>
+                <option value="Gezond">Gezond</option>
+                <option value="Zalm">Zalm</option>
+                <option value="Filet Americain">Filet Americain</option>
+                <option value="Zuiverlspread">Zuiverlspread</option>
+                <option value="Hete kipreepjes">Hete kipreepjes</option>
+                <option value="Brood Salade">Brood Salade</option>
+            </select>
+            <button id="addBroodjeBtn">Voeg broodje toe</button>
+        </div>
+
+        <div class="drankje-section">
+            <h2>Voeg een drankje toe</h2>
+            <select id="drankjeDropdown">
+                <option value="Water">Water</option>
+                <option value="Passion Fruit blikje">Passion Fruit blikje</option>
+                <option value="CapriSun">CapriSun</option>
+                <option value="Wicky Blauw">Wicky Blauw</option>
+                <option value="Crystal Clear Orange">Crystal Clear Orange</option>
+                <option value="Crystal Clear Lemon">Crystal Clear Lemon</option>
+                <option value="Sisi">Sisi</option>
+                <option value="Pepsi">Pepsi</option>
+                <option value="Chocomelk">Chocomelk</option>
+                <option value="Vitamin Water">Vitamin Water</option>
+                <option value="7-Up">7-Up</option>
+                <option value="Lipton Sparkling">Lipton Sparkling</option>
+                <option value="Lipton Peach">Lipton Peach</option>
+                <option value="Optimel Drink">Optimel Drink</option>
+                <option value="Karnemelk">Karnemelk</option>
+                <option value="Lipton Green Tea">Lipton Green Tea</option>
+            </select>
+            <button id="addDrankjeBtn">Voeg drankje toe</button>
+        </div>
+
+        <!-- Voeg een snack sectie toe -->
+        <h2>Voeg een snack toe</h2>
+        <select id="snackDropdown">
+            <option value="">Selecteer een snack</option>
+            <option value="laysClassic">Lays Classic</option>
+            <option value="laysPaprika">Lays Paprika</option>
+            <option value="noodleGroente">Noodle Groente</option>
+            <option value="noodleKip">Noodle Kip</option>
+        </select>
+        <button id="addSnackBtn">Voeg Snack toe</button>
+
+        <!-- Snackbar informatie -->
+        <div id="snackInfo"></div>
+
+        <div class="datetime-section">
+            <h3>Vandaag:</h3>
+            <span id="datetime"></span>
+        </div>
+
+        <!-- Navigatie knop naar Pen 2 -->
+        <button onclick="window.location.href='https://codepen.io/gufran-mohamed-awad/pen/QwLjZqP'">Ga naar de Workout pagina</button>
+        
+        <script src="script.js"></script>
+    </div>
+</body>
+</html>

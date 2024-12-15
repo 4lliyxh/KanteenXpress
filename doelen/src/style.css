@@ -1,0 +1,364 @@
+/* Laad Google Fonts voor een vrolijke uitstraling */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Fredoka+One&family=Lobster&display=swap');
+
+/* Algemene body instellingen */
+body {
+    font-family: 'Roboto', sans-serif; /* Moderne, leesbare font */
+    margin: 0;
+    padding: 0;
+    background-color: #D1C4E9; /* Pastel paarse achtergrond */
+    color: #333;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+/* Hoofdcontainer */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.9); /* Transparante achtergrond voor frissere uitstraling */
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+/* Hoofdcontainer Hover Effect */
+.container:hover {
+    transform: scale(1.03); /* Kleine vergroting voor dynamisch effect */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Fade-in animatie voor container */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Titel */
+h1 {
+    text-align: center;
+    font-family: 'Fredoka One', cursive; /* Leuke, speelse font voor titel */
+    font-size: 3.5rem;
+    color: #5D2B9D; /* Donkerpaarse kleur voor de titel */
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    animation: typing 2s steps(30) 1s forwards, slideIn 1s 3.2s forwards;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+/* Typmachine animatie voor de titel */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+/* Titel animatie (sliden van boven) */
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Doelen sectie */
+.goals-section {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    margin-bottom: 25px;
+    opacity: 0;
+    animation: fadeInUp 1s 1s forwards;
+}
+
+.goals-section h2 {
+    font-size: 2.2rem;
+    font-family: 'Lobster', cursive;
+    color: #f2cb30; /* Rood */
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+/* Snack sectie */
+.snack-section {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 25px;
+    opacity: 0;
+    animation: fadeInUp 1s 2s forwards;
+}
+
+/* Select voor snacks */
+#snackDropdown {
+    padding: 15px;
+    width: 100%;
+    margin-bottom: 20px;
+    border: 2px solid #ddd;
+    border-radius: 12px;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    background-color: #f9f9f9;
+    opacity: 0;
+    animation: fadeIn 1s 2s forwards;
+}
+
+#snackDropdown:focus {
+    border-color: #9b59b6; /* Paars */
+    outline: none;
+    box-shadow: 0 0 8px rgba(155, 89, 182, 0.6);
+}
+
+/* Knop voor snack toevoegen */
+#addSnackBtn {
+    background-color: #e67e22; /* Oranje */
+    color: white;
+    padding: 15px 30px; /* Ruime padding voor een grotere knop */
+    font-size: 1.4rem;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+    text-transform: uppercase;
+    width: 100%;
+    height: 60px; /* Consistente knophoogte */
+    font-weight: bold;
+    opacity: 0;
+    animation: fadeInUp 1s 2.5s forwards;
+}
+
+#addSnackBtn:hover {
+    background-color: #f39c12; /* Geel */
+    transform: scale(1.05);
+}
+
+/* Animatie voor het verschijnen van de snacksectie */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Fade-in-up animatie voor doelen sectie */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Input velden */
+input[type="number"] {
+    padding: 15px;
+    width: calc(100% - 30px);
+    margin-bottom: 15px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    font-size: 1.3rem;
+    transition: all 0.3s ease;
+    background-color: #f9f9f9;
+    opacity: 0;
+    animation: fadeIn 1s 0.5s forwards;
+}
+
+input[type="number"]:focus {
+    border-color: #c19dfa; /* Paars */
+    outline: none;
+    box-shadow: 0 0 8px rgba(155, 89, 182, 0.6);
+}
+
+/* Knoppen */
+button {
+    background-color: #e67e22; /* Oranje */
+    color: white;
+    padding: 15px 30px; /* Ruime padding voor een grotere knop */
+    font-size: 1.4rem;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+    text-transform: uppercase;
+    width: 100%;
+    height: 60px; /* Consistente knophoogte */
+    font-weight: bold;
+    opacity: 0;
+    animation: fadeInUp 1s 0.8s forwards;
+}
+
+button:hover {
+    background-color: #f39c12; /* Geel */
+    transform: scale(1.05);
+}
+
+/* Progressiebalken */
+.progress-section {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 25px;
+    opacity: 0;
+    animation: fadeInUp 1s 1.5s forwards;
+}
+
+.progress-bar-container {
+    margin-bottom: 20px;
+}
+
+progress {
+    width: 100%;
+    height: 30px;
+    border-radius: 12px;
+    border: 0;
+    background-color: #f0f0f0;
+    box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: progress-bar-animation 1s ease-out;
+}
+
+/* Verschillende kleuren voor de progressiebalken */
+#calorieProgress {
+    background-color: #f39c12; /* Geel */
+}
+
+#carbProgress {
+    background-color: #1abc9c; /* Groen */
+}
+
+#proteinProgress {
+    background-color: #9b59b6; /* Paars */
+}
+
+#fatProgress {
+    background-color: #e67e22; /* Oranje */
+}
+
+@keyframes progress-bar-animation {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+/* Datum sectie */
+.datetime-section {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 25px;
+    opacity: 0;
+    animation: fadeInUp 1s 1.5s forwards;
+}
+
+.datetime-section h3 {
+    font-size: 1.8rem;
+    color: #2c3e50;
+    font-weight: bold;
+}
+
+#datetime {
+    font-size: 1.5rem;
+    color: #e74c3c; /* Rood */
+    font-weight: bold;
+}
+
+/* Broodjes sectie */
+.broodje-section {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 25px;
+    opacity: 0;
+    animation: fadeInUp 1s 2s forwards;
+}
+
+select {
+    padding: 15px;
+    width: 100%;
+    margin-bottom: 20px;
+    border: 2px solid #ddd;
+    border-radius: 12px;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    background-color: #f9f9f9;
+    opacity: 0;
+    animation: fadeIn 1s 2s forwards;
+}
+
+select:focus {
+    border-color: #9b59b6; /* Paars */
+    outline: none;
+    box-shadow: 0 0 8px rgba(155, 89, 182, 0.6);
+}
+
+/* Algemene knoppen */
+button, select {
+    font-family: inherit;
+    font-size: 1.2rem;
+}
+
+/* Responsief ontwerp voor kleine schermen */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    .progress-bar-container {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 2.6rem;
+    }
+
+    h2, h3 {
+        font-size: 1.5rem;
+    }
+
+    button {
+        padding: 12px 25px;
+        font-size: 1rem;
+    }
+} 
